@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Device BT</string>
+    <string name="btn_device">BPM</string>
+</resources>

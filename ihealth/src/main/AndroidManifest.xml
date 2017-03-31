@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="app.sid.org.ihealth">
+<!--<manifest xmlns:android="http://schemas.android.com/apk/res/android" -->
+    <!--package="iHealthMyVitals.V2" -->
+    <!--platformBuildVersionCode="22" -->
+    <!--platformBuildVersionName="5.1.1-1819727" -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="iHealthMyVitals.V2.permission.MIPUSH_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true"
+        android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+    <application android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.ihealth.main.AppsDeviceParameters"
+        android:persistent="true" android:theme="@style/AppTheme2">
+        <meta-data android:name="com.samsung.android.health.platform_type" android:value="rel"/>
+        <meta-data android:name="com.samsung.android.health.permission.read" android:value="com.samsung.health.blood_pressure;             com.samsung.health.weight;             com.samsung.health.oxygen_saturation;"/>
+        <meta-data android:name="com.samsung.android.health.permission.write" android:value="com.samsung.health.blood_pressure;             com.samsung.health.weight;             com.samsung.health.oxygen_saturation;"/>
+        <activity android:name="com.ihealth.login.welcome.User_Welcome" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ihealth.myvitals.customers.ContactZendeskActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.ihealth.myvitals.customers.EU.ContactZendeskActivityForEU" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.ihealth.myvitals.customers.EU.ZendeskApiChooseTagPictureActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+        <activity android:name="com.ihealth.myvitals.customers.EU.ZendeskApiChooseTagProblemActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+        <activity android:name="com.ihealth.login.User_Guide" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.login.User_Login" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.ihealth.login.User_Register1" android:screenOrientation="portrait" android:theme="@style/register_dialog" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.ihealth.login.User_Register2" android:screenOrientation="portrait" android:theme="@style/register_dialog" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.ihealth.login.User_Register3" android:screenOrientation="portrait" android:theme="@style/register_dialog" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.ihealth.main.User_Userinfo" android:screenOrientation="portrait" android:theme="@style/AppDialogTheme" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.ihealth.main.User_Userinfo_Daily_Activity" android:screenOrientation="portrait" android:theme="@style/daily_activity_dialog" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.ihealth.login.User_Register_Terms" android:screenOrientation="portrait" android:theme="@style/register_dialog"/>
+
+        <activity android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:name="com.ihealth.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PageIndicatorDefaults"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP3_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP3L_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP3_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP3_3" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP3_3_V2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP5_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP7S_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP7S_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP7S_3" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP7S_5" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP5_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP5_3" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP5_4" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_BP5_5" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_AM3_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_AM3_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_AM3_3" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_AM3S_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS5_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS5_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS5_3" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS5_4" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS5_5" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS6_HS5S_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS6_HS5S_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.Zxing.CaptureActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS6_HS5S_3" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS6_HS5S_4" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.result.bp.BP_Result_ActV2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.result.hs.HS_Result_ActV2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.test.bp.BP_Test_Act" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.input.hs.HSInputActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.input.bp.BPInputActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.input.po.POInputActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.share.BpShareActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.share.PoShareActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.share.AmShareActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.share.HsShareActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.mydevice.SettingMyDeviceDetailsBP" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.mydevice.SettingMyDeviceDetailsAM" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.mydevice.SettingMyDeviceDetailsAM4" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.mydevice.SettingMyDeviceDetailsPO" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.mydevice.SettingMyDeviceDetailsHS6" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.mydevice.SettingMyDeviceDetailsHS5" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity"/>
+        <activity android:name="com.ihealth.mydevice.AM4PoolLength" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.mydevice.AM4PoolLengthInput" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.mydevice.ActiveAlarmActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.mydevice.AddAlarmActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.add.AMSelectedActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name="com.ihealth.device.add.AMSearchActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.ihealth.device.add.WaveGuideActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.ihealth.device.add.WaveGuideOneTimeActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.ihealth.device.guide.AMSearchHaveDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.device.guide.SelectNewDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.timeline.List_BPUpdate_Act" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.test.bp.BP7_Test_Degree_Act" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.result.am.AM_Result_Activity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.result.am.AM_Result_ActivityV2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.result.am.AM_Result_ActivityV3" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.setting.GoalActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.setting.UnitActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.setting.PartnerActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ihealth.setting.Act_About" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.setting.Act_Setting_Copyright" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.setting.Act_Setting_Regulatory" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.setting.Act_Setting_About" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.test.po.PO_Test_Act" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.result.po.PO_Result_ActV2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.timeline.List_POUpdate_Act" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.timeline.List_HSUpdate_Act" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_PO3_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_PO3_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_PO3_3" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_550BT_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_550BT_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.faq.Act_BPGuide_BP5view" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.faq.Act_BPGuide_BP7view" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.faq.Act_BPGuide_BP7Sview" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.faq.Act_BPGuide_BP3view" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.faq.Act_BPGuide_550BTview" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.faq.Act_BPGuide" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:launchMode="singleTask" android:name="com.ihealth.test.hs.HS_Test_Act" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS3_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS3_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS3_3" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS3_4" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS4_1" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS4_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS4_2_2" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ihealth.device.guide.DeviceGuide_HS4_3" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.bp.BPDatePicker" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.bp.BPTimePicker" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.bp.BPNumberPickerSYS" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.bp.BPNumberPickerDIA" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.bp.BPNumberPickerPulse" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.bp.BPNumberPickerSYSkpa" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.bp.BPNumberPickerDIAkpa" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.po.PODatePicker" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.po.POTimePicker" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.po.PONumberPickerPO" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.po.PONumberPickerPR" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.po.PONumberPickerPI" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSDatePicker" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSTimePicker" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerWeight" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerWeightSt" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerWeightLbs" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerBodyfat" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerBonemass" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerBonemassLbs" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerBonemassSt" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerBodywater" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerMusclemass" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerMusclemassLbs" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerMusclemassSt" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerDCI" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.input.hs.HSNumberPickerFatrating" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.bp.BP_DateTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.bp.BP_PulseTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.po.PO_Spo2Trends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.po.PO_PRTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.po.PO_PITrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.am.AM_StepTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.am.AM_SleepTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.am.AM_DistanceTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.am.AM_CalTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.hs.HS_WeightTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.hs.HS_BMITrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.hs.HS_BodyFatTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.hs.HS_BodyWaterTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.hs.HS_MuscleMassTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.trends.screenOrientation.hs.HS_BoneMassTrends_Orientation" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:launchMode="singleTop" android:name="iHealthMyVitals.V2.wxapi.WXEntryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent1101743399.data"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.tencent.weibo.sdk.android.component.Authorize"/>
+        <activity android:name="com.evernote.client.oauth.android.EvernoteOAuthActivity"/>
+        <!--<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>-->
+        <activity android:name="com.facebook.LoginActivity"/>
+        <service android:enabled="true" android:name="com.ihealth.communication.manager.DeviceManager"/>
+        <service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice"/>
+        <service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler"/>
+        <service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService"/>
+        <receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.ihealth.push.MyVitalsMessageReceiver">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.ihealth.mulituser.MulitDialog" android:screenOrientation="portrait" android:theme="@style/mulitdialog"/>
+        <activity android:name="com.ihealth.shealth.SettingShealth" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity"/>
+        <activity android:name="com.ihealth.login_bind.BindExistAccount" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity"/>
+        <activity android:name="com.ihealth.login_bind.CompleteUserInfo" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.ihealth.login_bind.BindChooseAccount" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity"/>
+        <activity android:name="com.ihealth.faq.Act_FAQ_Second" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity"/>
+        <activity android:name="com.ihealth.faq.Act_FAQ_Detial_Category" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity"/>
+        <activity android:name="com.ihealth.faq.Act_FAQ_Detial" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity"/>
+        <activity android:name="com.ihealth.faq.Act_FAQ_Guide" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity"/>
+        <activity android:name="com.ihealth.faq.Act_FAQ_Middle_Part" android:screenOrientation="portrait" android:theme="@style/AppThemeMainActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.ihealth.mydevice.WaveSwimGoalActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme2" android:windowSoftInputMode="stateHidden"/>
+    </application>
+</manifest>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="app.sid.org.ihealth">-->
+
+    <!--<application android:allowBackup="true" android:icon="@mipmap/ic_launcher"-->
+        <!--android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme">-->
+        <!--<activity android:name=".MainActivity">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+    <!--</application>-->
+
+<!--</manifest>-->

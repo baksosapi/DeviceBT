@@ -1,0 +1,129 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme2" parent="@style/Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+    </style>
+    <style name="AppThemeMainActivity" parent="@style/Theme.AppCompat.Light" />
+    <style name="register_dialog" parent="@android:style/Theme.Light">
+        <item name="android:backgroundDimAmount">0.0</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AppDialogTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:colorForeground">@color/bright_foreground_material_light</item>
+        <item name="android:colorBackground">@color/background_material_light</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:disabledAlpha">@dimen/abc_disabled_alpha_material_light</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+        <item name="android:textAppearanceInverse">@style/TextAppearance.AppCompat.Inverse</item>
+        <item name="android:textColorPrimary">@color/abc_primary_text_material_light</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/abc_primary_text_disable_only_material_light</item>
+        <item name="android:textColorSecondary">@color/abc_secondary_text_material_light</item>
+        <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
+        <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_dark</item>
+        <item name="android:textColorHintInverse">@color/hint_foreground_material_dark</item>
+        <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.AppCompat.Small</item>
+        <item name="android:textAppearanceLargeInverse">@style/TextAppearance.AppCompat.Large.Inverse</item>
+        <item name="android:textAppearanceMediumInverse">@style/TextAppearance.AppCompat.Medium.Inverse</item>
+        <item name="android:textAppearanceSmallInverse">@style/TextAppearance.AppCompat.Small.Inverse</item>
+        <item name="android:windowBackground">@color/background_material_light</item>
+        <item name="android:textColorHighlight">@color/highlighted_text_material_light</item>
+        <item name="android:textColorHint">@color/hint_foreground_material_light</item>
+        <item name="android:textColorLink">?colorAccent</item>
+        <item name="android:colorForegroundInverse">@color/bright_foreground_material_dark</item>
+        <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Button</item>
+        <item name="android:textColorTertiary">@color/abc_secondary_text_material_light</item>
+        <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_dark</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/abc_primary_text_disable_only_material_dark</item>
+        <item name="android:colorBackgroundCacheHint">@color/abc_background_cache_hint_selector_material_light</item>
+        <item name="drawerArrowStyle">@style/Widget.AppCompat.DrawerArrowToggle</item>
+        <item name="dialogTheme">@style/Theme.AppCompat.Light.Dialog</item>
+        <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
+        <item name="listDividerAlertDialog">@null</item>
+        <item name="buttonBarStyle">@style/Widget.AppCompat.ButtonBar</item>
+        <item name="buttonBarButtonStyle">@style/Widget.AppCompat.Button.ButtonBar.AlertDialog</item>
+        <item name="colorPrimary">@color/primary_material_light</item>
+        <item name="colorPrimaryDark">@color/primary_dark_material_light</item>
+        <item name="colorAccent">@color/accent_material_light</item>
+        <item name="colorControlNormal">?android:textColorSecondary</item>
+        <item name="colorControlActivated">?colorAccent</item>
+        <item name="colorControlHighlight">@color/ripple_material_light</item>
+        <item name="colorButtonNormal">@color/button_material_light</item>
+        <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
+        <item name="alertDialogStyle">@style/AlertDialog.AppCompat.Light</item>
+        <item name="alertDialogCenterButtons">false</item>
+        <item name="alertDialogTheme">@style/Theme.AppCompat.Light.Dialog.Alert</item>
+        <item name="textColorAlertDialogListItem">@color/abc_primary_text_material_light</item>
+        <item name="buttonBarPositiveButtonStyle">?buttonBarButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">?buttonBarButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">?buttonBarButtonStyle</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
+        <item name="buttonStyleSmall">@style/Widget.AppCompat.Button.Small</item>
+        <item name="checkboxStyle">@style/Widget.AppCompat.CompoundButton.CheckBox</item>
+        <item name="radioButtonStyle">@style/Widget.AppCompat.CompoundButton.RadioButton</item>
+        <item name="ratingBarStyle">@style/Widget.AppCompat.RatingBar</item>
+        <item name="switchStyle">@style/Widget.AppCompat.CompoundButton.Switch</item>
+    </style>
+
+    <style name="daily_activity_dialog" parent="@android:style/Theme.Light">
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:alpha">1.0</item>
+    </style>
+
+    <style name="Theme"></style>  <!-- I declared new style which dont have parent with android.Theme -->
+    <!--<style name="Theme.PageIndicatorDefaults" parent="Theme">  &lt;!&ndash; Extended this style from style I declared above &ndash;&gt;-->
+        <!--<item name="vpiCirclePageIndicatorStyle">@style/Widget.CirclePageIndicator</item>-->
+        <!--<item name="vpiTitlePageIndicatorStyle">@style/Widget.TitlePageIndicator</item>-->
+        <!--<item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator</item>-->
+        <!--<item name="vpiTabTextStyle">@style/Widget.TabPageIndicator.Text</item>-->
+    <!--</style>-->
+    <style name="Theme.PageIndicatorDefaults" parent="@android:style/Theme.Light.NoTitleBar">
+        <!--<item name="vpiIconPageIndicatorStyle">@style/Widget.IconPageIndicator</item>-->
+        <!--<item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator</item>-->
+    </style>
+
+    <style name="mulitdialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>
